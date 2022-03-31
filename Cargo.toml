@@ -2,6 +2,8 @@
 name = "crispr_temperature_calculator"
 version = "0.1.0"
 edition = "2021"
+description = "A package for calculating the temperature of a from celsius to fahrenheit"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
