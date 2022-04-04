@@ -1,16 +1,17 @@
-use std::io;
+use clap::Parser;
+
+#[derive(Parser ,Debug)]
+#[clap(version, author = "Crispr", about = "A simple cli calculator")]
+
+struct Args{
+    /// The temperature in celsius which should be converted to Fahrenheit
+    #[clap(short, long)]
+    temp: u16,
+}
 
 fn main() {
+    let args = Args::parse();
 
-    let mut tempreture = String::new();
-    
-    println!("please input the celsius number which should be converted to Fahrenheit: ");
-
-    io::stdin().read_line(&mut tempreture).expect("failed to read line");
-
-    let mut tempreture : u32 = tempreture.trim().parse().expect("please type a number!");
-
-    tempreture = (tempreture * 9/5) + 32;
-
-    println!("The temperature in Fahrenheit is: {}°", tempreture);
+    let temp = (args.temp * 9/5) + 32;
+    println!("The temprature in Fahrenheit is {}°", temp);
 }
