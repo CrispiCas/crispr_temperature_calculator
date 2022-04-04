@@ -4,7 +4,7 @@ fn main() {
 
     let mut tempreture = String::new();
     
-    println!("please input the celsius number: ");
+    println!("please input the celsius number which should be converted to Fahrenheit: ");
 
     io::stdin().read_line(&mut tempreture).expect("failed to read line");
 
@@ -12,5 +12,5 @@ fn main() {
 
     tempreture = (tempreture * 9/5) + 32;
 
-    println!("{}", tempreture);
+    println!("The temperature in Fahrenheit is: {}°", tempreture);
 }
