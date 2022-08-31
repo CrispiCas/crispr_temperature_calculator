@@ -4,9 +4,9 @@ use clap::Parser;
 #[clap(version, author = "Crispr", about = "A simple cli calculator")]
 
 struct Args{
-    /// The temperature in celcius which should be converted to fahrenheit or kelvin
+    /// The temperature in celcius which should be converted to fahrenheit or kelvin.
     celsius: f64,
-    /// The unit to convert to. Can be either fahrenheit (f) or kelvin (k)
+    /// The unit to convert to. Can be either fahrenheit (f) or kelvin (k).
     unit: char,
 }
 
